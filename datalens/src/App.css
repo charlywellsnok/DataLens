@@ -1,16 +1,346 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General */
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: "Poppins", sans-serif;
 
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)
     ),
-    url("pic.jpeg");
+    url("pic.png");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  color: white;
+
+  background: rgba(22, 30, 55, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  padding: 15px 10px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stats */
+.stats-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: 40px;
+  margin-left: 25%;
+}
+
+.stat-card {
+  width: 220px;
+  height: 70px;
+
+  color: white;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(22, 30, 55, 0.55);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.06);
+
+  transition: .3s;
+}
+
+.stat-card h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.stat-card p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: rgba(255,255,255,.8);
+}
+
+/* Search */
+.SearchSection {
+  margin-left: 25%;
+  margin-top: 35px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.SearchSection input {
+  width: 450px;
+
+  padding: 14px 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+
+  color: white;
+
+  background: rgba(22,30,55,.55);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 15px;
+
+  outline: none;
+
+  transition: .3s;
+}
+
+.SearchSection input::placeholder {
+  color: rgba(255,255,255,.6);
+}
+
+.SearchSection input:focus {
+  border-color: #66b3ff;
+}
+
+/* Dashboard */
+.Dashboard {
+  margin-left: 25%;
+  margin-top: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 20px;
+}
+
+/* Recipe Card */
+.Card {
+  width: 260px;
+
+  padding: 20px;
+
+  color: white;
+
+  background: rgba(22,30,55,.55);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.06);
+
+  transition: .3s;
+}
+
+.Card:hover {
+  transform: translateY(-8px);
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%;
+  height: 170px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  margin-bottom: 15px;
+}
+
+/* Recipe Title (API data) */
+.Card h3 {
+  margin: 0 0 15px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: white;
+}
+
+/* Recipe Details (API data) */
+.Card p {
+  margin: 8px 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: rgba(255,255,255,.85);
+}
+
+.Card strong {
+  color: #ffd166;
+  font-weight: 600;
+}
+
+
+.logo{
+    font-size:70px;
+    margin-top:15px;
+}
+
+.app-title{
+    color:white;
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.menu{
+    width:90%;
+}
+
+.menu-item{
+    color:white;
+
+    font-size:18px;
+    font-weight:500;
+
+    padding:15px 20px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.menu-item:hover{
+    background:rgba(255,255,255,.12);
+    transform:translateX(8px);
+}
+
+.active{
+    background:#ff8c42;
+    color:white;
+}
+
+.tip-box{
+
+    width:85%;
+
+    margin-top:auto;
+
+    margin-bottom:25px;
+
+    padding:20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+}
+
+.tip-box h3{
+    margin-bottom:12px;
+}
+
+.tip-box p{
+    line-height:1.6;
+    font-size:15px;
+    color:rgba(255,255,255,.85);
+}
+
+
+.FilterSection{
+    margin-left:25%;
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+}
+
+.FilterSection select{
+
+    width:280px;
+
+    padding:12px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(22,30,55,.55);
+
+    color:white;
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    font-size:15px;
+
+    cursor:pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+
+  .stats-container,
+  .SearchSection,
+  .Dashboard {
+    margin-left: 0;
+  }
+}
+
+.menu-item.active {
+  background: linear-gradient(135deg, #ff9a3c, #ff6b35);
+  color: white;
+
+  transform: translateX(8px);
+
+  box-shadow: 0 10px 25px rgba(255, 140, 66, 0.4);
+
+  font-weight: 700;
 }
